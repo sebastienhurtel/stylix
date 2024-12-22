@@ -11,6 +11,7 @@ in {
       inherit (cfg) name package size;
       x11.enable = true;
       gtk.enable = true;
+      hyprcursor.enable = if config.wayland.windowManager.hyprland.enable then true else false;
     };
   };
 }
